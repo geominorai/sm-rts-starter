@@ -938,7 +938,7 @@ void ProcessCameraControls(int iClient, int iButtons, const int iMouse[2]) {
 			}
 
 			// Consistency is required for counter-clockwise order of points used in
-			// SelectonContains to generate plane normals that must all point inwards
+			// SelectionContains to generate plane normals that must all point inwards
 
 			float fMouseTopLeft[2];
 			fMouseTopLeft[0] = fMouse[0] < g_eCommander[iClient].fMouseDragStart[0] ? fMouse[0] : g_eCommander[iClient].fMouseDragStart[0];
