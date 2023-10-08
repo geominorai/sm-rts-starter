@@ -736,9 +736,7 @@ void ProcessCameraControls(int iClient, int iButtons, const int iMouse[2]) {
 		TeleportEntity(iCameraEntity, vecCameraPos, vecCameraAng, ZERO_VECTOR);
 
 		g_eCommander[iClient].vecVector = vecVector;
-	}
-
-	 else if (g_eCommander[iClient].bRotating) {
+	} else if (g_eCommander[iClient].bRotating) {
 		g_eCommander[iClient].bRotating = false;
 
 		g_eCommander[iClient].fMouse = g_eCommander[iClient].fRotatingStartMouse;
@@ -1014,7 +1012,7 @@ void ProcessCameraControls(int iClient, int iButtons, const int iMouse[2]) {
 			Entity_SetAbsOrigin(iEnt2, vecBoxC2);
 			Entity_SetAbsOrigin(iEnt3, vecBoxC3);
 
-			ShowSyncHudText(iClient, g_hHudText, NULL_STRING);
+			g_eCommander[iClient].sCursor = NULL_STRING;
 		} else if (!(g_eCommander[iClient].bMoving || g_eCommander[iClient].bRotating)) {
 			g_eCommander[iClient].bDragging = true;
 
